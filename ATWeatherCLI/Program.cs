@@ -1,18 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-string firstName = "Alexander";
-string lastName = "Thompson";
-int age = 33;
+using ATWeatherCLI.Classes;
 
-static void SayHello(string firstName, string lastName, int age)
-{
-    Console.WriteLine("Hello, World!");
-    Console.WriteLine("My first name is: " + firstName);
-    Console.WriteLine("My last name is: " + lastName);
-    Console.WriteLine("My age is: " + age);
-    Console.WriteLine("Press any key to exit...");
-    Console.ReadKey();
-}
+// var city = new City("Newcastle", "NE21 4DB");
+// var weatherService = new WeatherService();
+// var weather = weatherService.GetWeather(city);
+//
+// Console.WriteLine($"Weather for {city}: {weather}");
 
-SayHello(firstName, lastName, age);
+Console.WriteLine("Welcome to the AT Weather CLI!");
+Console.WriteLine("Please enter a UK postcode: ");
+string postcode = Console.ReadLine() ?? "";
+
+var city = new City("Unknown", postcode);
+var weatherService = new WeatherService();
+var weather = weatherService.GetWeather(city);
+
+Console.WriteLine($"\nWeather for {city}:\n{weather}");
 
