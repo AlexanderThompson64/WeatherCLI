@@ -1,0 +1,17 @@
+# Build Folders
+bin/
+obj/
+
+# Rider/IDE files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.idea/
+.vscode/
+
+# OS Files
+.DS_Store
+
+# Logs
+*.log
